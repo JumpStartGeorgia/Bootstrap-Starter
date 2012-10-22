@@ -46,12 +46,15 @@ namespace :deploy do
 
   task :symlink_config, roles: :app do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+		puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>"
+		puts "If this is first time, be sure to run the following so app starts on server bootup: sudo update-rc.d unicorn_#{application} defaults"
+		puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>"
   end
   after "deploy:finalize_update", "deploy:symlink_config"
 
   desc "Make sure local git is in sync with remote."
   task :check_revision, roles: :web do
-    unless `git rev-parse HEAD` == `git rev-parse origin/master`
+    unless `git rev-parse HEAD` == `git rev-parse origin/#{git_branch_name}`
       puts "WARNING: HEAD is not the same as origin/master"
       puts "Run `git push` to sync changes."
       exit
