@@ -1,5 +1,29 @@
 # encoding: utf-8
 en:
+  activerecord:
+    models:
+      user: User
+    attributes:
+      user:
+        email: Email Address
+        password: Password
+        password_confirmation: Password Confirmation
+        role: Role
+        remember_me: Remeber Me
+  helpers:
+    actions: Actions
+    links:
+      admin: Admin Section
+      edit: Edit
+      confirm: Are you sure?
+      destroy: Delete
+      new: New
+      list: View All
+      cancel: Cancel
+      reset: Reset
+    titles:
+      new: "New %{model}"
+      edit: "Edit %{model}"
   app:
     language:
       en: English

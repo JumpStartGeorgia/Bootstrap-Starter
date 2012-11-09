@@ -1,5 +1,29 @@
 # encoding: utf-8
 ka:
+  activerecord:
+    models:
+      user: მომხმარებელი
+    attributes:
+      user:
+        email: ელ.ფოსტა
+        password: პაროლი
+        password_confirmation: გაიმეორეთ პაროლი
+        role: როლი
+        remember_me: დამიმახსოვრე
+  helpers:
+    actions: აირჩიეთ
+    links:
+      admin: ადმინისტრატორის განყოფილება
+      edit: შეცვლა
+      confirm: დარწმუნებული ხართ?
+      destroy: წაშლა
+      new: ახალი
+      list: იხილეთ სრულად
+      cancel: გაუქმება
+      reset: საწყის კონფიგურაციაზე დაბრუნება
+    titles:
+      new: "ახალი %{model}"
+      edit: "შეცვლა %{model}"
   app:
     language:
       en: English

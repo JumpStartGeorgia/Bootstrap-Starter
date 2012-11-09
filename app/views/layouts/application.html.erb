@@ -80,6 +80,17 @@
 								</div>
 							<% end %>
 
+
+							<% if content_for?(:title) %>
+								<div class="page-header">
+								  <div class="block">
+			              <h1>
+										  <%= yield(:title) %>
+									  </h1>
+									</div>
+								</div>
+							<% end %>
+
 	            <%= yield %>
 	          </div><!--/span-->
 		      </div><!--/row-->
