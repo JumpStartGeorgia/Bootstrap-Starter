@@ -13,9 +13,15 @@
 //= require vendor
 //= require_tree .
 
-// set focus to first text box on page
 $(document).ready(function(){
+	// set focus to first text box on page
 	if (gon.highlight_first_form_field){
 	  $(":input:visible:enabled:first").focus();
 	}
+
+	// workaround to get logout link in navbar to work
+	$('body')
+		.off('click.dropdown touchstart.dropdown.data-api', '.dropdown')
+		.on('click.dropdown touchstart.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() });
+
 });
