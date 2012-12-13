@@ -14,6 +14,10 @@ class User < ActiveRecord::Base
     where("role != ?", ROLES[:admin])
   end
 
+	# if no role is supplied, default to the basic user role
+	def check_for_role
+		self.role = User::ROLES[:user] if self.role.nil?
+	end
 
   # use role inheritence
   # - a role with a larger number can do everything that smaller numbers can do
