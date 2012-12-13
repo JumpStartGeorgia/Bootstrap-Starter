@@ -28,4 +28,9 @@ class User < ActiveRecord::Base
     end
     return false
   end
+  
+  def role_name
+    ROLES.keys[ROLES.values.index(self.role)].to_s
+  end
+  
 end
