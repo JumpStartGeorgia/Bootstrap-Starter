@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'bundler', '1.2.0'
-gem "rails", "3.1.3"
+gem 'bundler', '~> 1.2.0'
+gem "rails", "3.1.10"
 gem "mysql2", "~> 0.3.11" # this gem works better with utf-8
 
 gem "json"
@@ -34,6 +34,8 @@ group :assets do
   gem "sass-rails", "3.1.4"
   gem "coffee-rails", "~> 3.1.1"
   gem "uglifier", ">= 1.0.3"
+  gem "therubyracer"
+  gem "less-rails"
 	gem "twitter-bootstrap-rails", "~> 2.1.0"
 end
 

@@ -1,6 +1,6 @@
 <% title t('.title') %>
 
-  <% if current_user.role? ROLES[:user_manager] %>
+  <% if current_user.role? User::ROLES[:user_manager] %>
    <div class="span4">
  		<h3><%= t('.users_header')%></h3>
  		<ul class="standard">

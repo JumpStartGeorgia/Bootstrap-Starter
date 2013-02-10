@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
 
 	# if no role is supplied, default to the basic user role
 	def check_for_role
-		self.role = User::ROLES[:user] if self.role.nil?
+		self.role = ROLES[:user] if self.role.nil?
 	end
 
   # use role inheritence
