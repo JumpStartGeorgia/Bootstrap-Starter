@@ -103,6 +103,11 @@ ol.standard li {
 	line-height: 1.1;
 }
 
+/* so ie will display the correct color background */
+.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+	filter: none; 
+}
+
 /* multilanguage form styles */
 div#form-en {
 	background-color:#ddd;

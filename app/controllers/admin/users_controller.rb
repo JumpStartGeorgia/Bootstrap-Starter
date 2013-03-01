@@ -56,7 +56,7 @@ class Admin::UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to admin_users_path, notice: t('app.msgs.success_created', :obj => t('app.common.user')) }
+        format.html { redirect_to admin_users_path, notice: t('app.msgs.success_created', :obj => t('activerecord.models.user')) }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
@@ -72,7 +72,7 @@ class Admin::UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to admin_users_path, notice: t('app.msgs.success_updated', :obj => t('app.common.user')) }
+        format.html { redirect_to admin_users_path, notice: t('app.msgs.success_updated', :obj => t('activerecord.models.user')) }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
