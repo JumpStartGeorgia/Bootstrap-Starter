@@ -71,7 +71,13 @@ class Admin::UsersController < ApplicationController
     @user = User.find(params[:id])
 
     respond_to do |format|
-      if @user.update_attributes(params[:user])
+      success = if params[:user][:password].present? || params[:user][:password_confirmation].present?
+        @user.update_with_password(params[:user])
+      else
+        @user.update_without_password(params[:user])
+      end
+
+      if success
         format.html { redirect_to admin_users_path, notice: t('app.msgs.success_updated', :obj => t('activerecord.models.user')) }
         format.json { head :ok }
       else
