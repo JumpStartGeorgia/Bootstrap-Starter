@@ -10,6 +10,10 @@ en:
         password_confirmation: Password Confirmation
         role: Role
         remember_me: Remeber Me
+    errors:
+      messages:
+        required_field: "is a required field."
+        already_exists: 'already exists in the database.'
   helpers:
     actions: Actions
     links:

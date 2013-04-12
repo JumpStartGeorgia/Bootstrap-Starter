@@ -10,6 +10,10 @@ ka:
         password_confirmation: გაიმეორეთ პაროლი
         role: როლი
         remember_me: დამიმახსოვრე
+    errors:
+      messages:
+        required_field: "სავალდებულოა"
+        already_exists: 'უკვე არსებობს მონაცემთა ბაზაში'
   helpers:
     actions: აირჩიეთ
     links:

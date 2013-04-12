@@ -16,12 +16,6 @@ GIT
       rails (>= 3.1.0)
 
 GIT
-  remote: https://github.com/davidray/nested_form.git
-  revision: c97d280b75af661eb36279c04e420fb8098ad60d
-  specs:
-    nested_form (0.1.1)
-
-GIT
   remote: https://github.com/jilion/useragent.git
   revision: b65739e911aea99e444c608e65c7be9d483d4eaf
   specs:
@@ -68,7 +62,7 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
-    cocaine (0.3.0)
+    cocaine (0.4.2)
     coffee-rails (3.1.1)
       coffee-script (>= 2.2.0)
       railties (~> 3.1.0)
@@ -88,7 +82,7 @@ GEM
       actionmailer (>= 3.0.4)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    ffi (1.3.1)
+    ffi (1.7.0)
     formtastic (2.1.1)
       actionpack (~> 3.0)
     globalize3 (0.2.0)
@@ -134,11 +128,11 @@ GEM
     paper_trail (2.6.3)
       activerecord (~> 3.0)
       railties (~> 3.0)
-    paperclip (3.0.4)
+    paperclip (3.4.0)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
-      cocaine (>= 0.0.2)
+      cocaine (~> 0.4.0)
       mime-types
     polyglot (0.3.3)
     psych (1.2.2)
@@ -168,7 +162,7 @@ GEM
       thor (~> 0.14.6)
     raindrops (0.10.0)
     rake (10.0.3)
-    rb-inotify (0.8.8)
+    rb-inotify (0.9.0)
       ffi (>= 0.5.0)
     rdoc (3.12.1)
       json (~> 1.4)
@@ -215,29 +209,28 @@ DEPENDENCIES
   cancan (~> 1.6.8)
   capistrano (~> 2.12.0)
   coffee-rails (~> 3.1.1)
-  devise (= 2.0.4)
-  dynamic_form (= 1.1.4)
-  exception_notification (= 2.5.2)
-  formtastic (= 2.1.1)
+  devise (~> 2.0.4)
+  dynamic_form (~> 1.1.4)
+  exception_notification (~> 2.5.2)
+  formtastic (~> 2.1.1)
   formtastic-bootstrap!
-  globalize3 (= 0.2.0)
-  gon (= 2.2.2)
+  globalize3 (~> 0.2.0)
+  gon (~> 2.2.2)
   has_permalink (~> 0.1.4)
   i18n-js (~> 2.1.2)
-  jquery-rails (= 1.0.19)
+  jquery-rails (~> 1.0.19)
   json
   less-rails
   mysql2 (~> 0.3.11)
-  nested_form (~> 0.1.1)!
-  paperclip (~> 3.0.4)
-  psych (= 1.2.2)
+  paperclip (~> 3.4.0)
+  psych (~> 1.2.2)
   rails (= 3.1.10)
   rails-dev-boost!
-  rb-inotify (~> 0.8.8)
+  rb-inotify (~> 0.9)
   sass-rails (= 3.1.4)
   therubyracer
   twitter-bootstrap-rails (~> 2.1.0)
   uglifier (>= 1.0.3)
-  unicorn (= 4.2.1)
+  unicorn (~> 4.2.1)
   useragent!
-  will_paginate (= 3.0.3)
+  will_paginate (~> 3.0.3)
