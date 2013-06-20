@@ -5,8 +5,11 @@
 
  *= require formtastic
  *= require formtastic-bootstrap
- *= require vendor
+ *= require jquery.ui.core
+ *= require jquery.ui.theme
+ *= require dataTables/jquery.dataTables.bootstrap
  *= require_tree .
+ *= require vendor
  *= require_self
 */
 

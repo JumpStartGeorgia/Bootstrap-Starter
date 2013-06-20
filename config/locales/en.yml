@@ -51,6 +51,7 @@ en:
       new: New
     common:
       app_name: Bootstrap Starter Project
+      added_on: "Added on: %{date}" 
     msgs:
       does_not_exist: You tried to access a page that does not exist.
       not_authorized: You are not authorized to view that page.
