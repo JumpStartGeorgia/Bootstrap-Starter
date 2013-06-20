@@ -5,6 +5,7 @@
 
  *= require formtastic
  *= require formtastic-bootstrap
+ *= require vendor
  *= require_tree .
  *= require_self
 */

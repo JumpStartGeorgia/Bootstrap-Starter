@@ -23,8 +23,10 @@ en:
       destroy: Delete
       new: New
       list: View All
+      back: View All
       cancel: Cancel
       reset: Reset
+      view: View
     titles:
       new: "New %{model}"
       edit: "Edit %{model}"
@@ -33,7 +35,7 @@ en:
       en: English
       ka: ქართული
     buttons:
-      back: Back
+      back: View All
       list: View All
       admin: Admin Section
       delete: Delete
@@ -76,9 +78,7 @@ en:
   admin:
     index:
       title: Administration Section
-      users_header: Users
-      new_users: Add User
-      view_users: View Users
+      users: Users
     users:
       edit:
         title: Editing User

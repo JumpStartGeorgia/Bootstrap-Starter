@@ -23,8 +23,10 @@ ka:
       destroy: წაშლა
       new: ახალი
       list: იხილეთ სრულად
+      back: იხილეთ სრულად
       cancel: გაუქმება
       reset: საწყის კონფიგურაციაზე დაბრუნება
+      view: ნახვა
     titles:
       new: "ახალი %{model}"
       edit: "შეცვლა %{model}"
@@ -33,7 +35,7 @@ ka:
       en: English
       ka: ქართული
     buttons:
-      back: უკან
+      back: იხილეთ სრულად
       list: იხილეთ სრულად
       admin: ადმინისტრატორის განყოფილება
       delete: წაშლა
@@ -77,9 +79,7 @@ ka:
   admin:
     index:
       title: ადმინისტრატორის განყოფილება
-      users_header: მომხმარებლები
-      new_users: მომხმარებლის დამატება
-      view_users: მომხმარებლების ნახვა
+      users: მომხმარებლები
     users:
       edit:
         title: ცვლილებების შეტანა მომხმარებლის გვერდზე
