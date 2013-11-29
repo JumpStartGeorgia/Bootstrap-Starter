@@ -61,7 +61,7 @@ en:
     application:
       admin: Admin
       sign_out: Sign Out
-      js_link_title: "Visit JumpStart Georgia's website"
+      js_link_title: JumpStart Georgia - We communicate data better!
       js_link_text: Built by
     unsupported_browser:
       title: Unsupported Browser
@@ -74,7 +74,7 @@ en:
       Safari: Safari
       admin: Admin
       sign_out: Sign Out
-      js_link_title: "Visit JumpStart Georgia's website"
+      js_link_title: JumpStart Georgia - We communicate data better!
       js_link_text: Built by
   admin:
     index:
