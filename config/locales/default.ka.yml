@@ -135,9 +135,9 @@ ka:
     select:
       prompt: "გთხოვთ, აირჩიოთ"
     submit:
-      create: 'შექმნა %{model}'
-      update: 'განახლება %{model}'
-      submit: 'შენახვა %{model}'
+      create: '%{model} შექმნა'
+      update: '%{model} განახლება'
+      submit: '%{model} შენახვა'
 
   errors:
     format: "%{attribute} %{message}"
@@ -150,16 +150,16 @@ ka:
       accepted: "საჭიროებს თანხმობას"
       empty: "არ უნდა იყოს ცარიელი"
       blank: "არ უნდა იყოს ცარიელი"
-      too_long: "ძალიან გრძელია (სიმბოლოების მაქსიმალური რაოდენობა %{count} )"
-      too_short: "ძალიან მოკლეა (სიმბოლოების მინიმალური რაოდენობა %{count} )"
+      too_long: "ძალიან გრძელია (სიმბოლოების მაქსიმალური რაოდენობა %{count})"
+      too_short: "ძალიან მოკლეა (სიმბოლოების მინიმალური რაოდენობა %{count})"
       wrong_length: "არასწორი სიგრძე (უნდა იყოს %{count} სიმბოლო)"
       not_a_number: "არ არის რიცხვი"
       not_an_integer: "უნდა იყოს მთელი რიცხვი"
-      greater_than: "უნდა იყოს %{count} -ზე მეტი"
-      greater_than_or_equal_to: "უნდა იყოს %{count} -ზე მეტი ან ტოლი"
-      equal_to: "უნდა იყოს %{count} -ს ტოლი"
-      less_than: "უნდა იყოს %{count} -ზე ნაკლები"
-      less_than_or_equal_to: "უნდა იყოს %{count} -ზე ნაკლები ან ტოლი"
+      greater_than: "უნდა იყოს %{count}-ზე მეტი"
+      greater_than_or_equal_to: "უნდა იყოს %{count}-ზე მეტი ან ტოლი"
+      equal_to: "უნდა იყოს %{count}-ის ტოლი"
+      less_than: "უნდა იყოს %{count}-ზე ნაკლები"
+      less_than_or_equal_to: "უნდა იყოს %{count}-ზე ნაკლები ან ტოლი"
       odd: "უნდა იყოს კენტი"
       even: "უნდა იყოს ლუწი"
 
@@ -167,13 +167,13 @@ ka:
     errors:
       template:
         header:
-          one:    "გამო შეუძლებელია -ის შენახვა"
-          other:  "გამო შეუძლებელია -ის შენახვა"
+          one:    "გამო შეუძლებელია-ის შენახვა"
+          other:  "გამო შეუძლებელია-ის შენახვა"
         body: "აღმოჩენილია შემდეგ ველებთან დაკავშირებული პრობლემები:"
 
       messages:
         taken: "უკვე დაკავებულია"
-        record_invalid: "ვალიდაცია ჩავარდა: %{errors}"
+        record_invalid: "დაფიქსირდა შეცდომა: %{errors}"
         <<: *errors_messages
 
       full_messages:

@@ -10,6 +10,7 @@ en:
         password_confirmation: Password Confirmation
         role: Role
         remember_me: Remeber Me
+        nickname: Nickname
     errors:
       messages:
         required_field: "is a required field."
@@ -27,6 +28,23 @@ en:
       cancel: Cancel
       reset: Reset
       view: View
+      sign_in_facebook: Sign in with Facebook
+      forgot_password: Forgot Password?
+      change_password: Change Your Password
+      change_password2: Change Password
+      password_reset: Reset Password
+      sign_in2: Sign In
+      sign_in: "Already have an account?"
+      sign_up2: Sign Up
+      sign_up_question: "Not a member yet?"
+      sign_up: "Register now"
+      sign_up_title: Join StoryBuilder
+      sign_out: Sign Out
+      sign_in_provider: "Sign in with %{provider}"
+      sign_up_provider: "Sign up with %{provider}"
+      like: Like   
+      likes: Likes      
+      menu: Menu
     titles:
       new: "New %{model}"
       edit: "Edit %{model}"
@@ -52,6 +70,8 @@ en:
     common:
       app_name: Bootstrap Starter Project
       added_on: "Added on: %{date}" 
+      jumpstart: JumpStart Georgia
+      js_link_title: JumpStart Georgia - We communicate data better!
     msgs:
       does_not_exist: You tried to access a page that does not exist.
       not_authorized: You are not authorized to view that page.
@@ -59,10 +79,6 @@ en:
       success_updated: "%{obj} was successfully updated."
   layouts:
     application:
-      admin: Admin
-      sign_out: Sign Out
-      js_link_title: JumpStart Georgia - We communicate data better!
-      js_link_text: Built by
     unsupported_browser:
       title: Unsupported Browser
       p1: We are sorry to report that your browser is out of date and will not properly render the content from this website.
@@ -72,10 +88,6 @@ en:
       ie: Internet Explorer (Windows only)
       opera: Opera
       Safari: Safari
-      admin: Admin
-      sign_out: Sign Out
-      js_link_title: JumpStart Georgia - We communicate data better!
-      js_link_text: Built by
   admin:
     index:
       title: Administration Section

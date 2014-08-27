@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
 
   validates :role, :presence => true
 
+  ROLES = {:user => 0, :admin => 99}
+
   def self.no_admins
     where("role != ?", ROLES[:admin])
   end
@@ -21,7 +23,6 @@ class User < ActiveRecord::Base
 
   # use role inheritence
   # - a role with a larger number can do everything that smaller numbers can do
-  ROLES = {:user => 0, :admin => 99}
   def role?(base_role)
     if base_role && ROLES.values.index(base_role)
       return base_role <= self.role

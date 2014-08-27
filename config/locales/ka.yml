@@ -10,9 +10,10 @@ ka:
         password_confirmation: გაიმეორეთ პაროლი
         role: როლი
         remember_me: დამიმახსოვრე
+        nickname: მომხმარებლის სახელი
     errors:
       messages:
-        required_field: "სავალდებულოა"
+        required_field: "სავალდებულო ველი"
         already_exists: 'უკვე არსებობს მონაცემთა ბაზაში'
   helpers:
     actions: აირჩიეთ
@@ -22,11 +23,28 @@ ka:
       confirm: დარწმუნებული ხართ?
       destroy: წაშლა
       new: ახალი
-      list: იხილეთ სრულად
-      back: იხილეთ სრულად
+      list: ყველას ნახვა
+      back: ყველას ნახვა
       cancel: გაუქმება
       reset: საწყის კონფიგურაციაზე დაბრუნება
       view: ნახვა
+      sign_in_facebook: Facebook-ით შესვლა
+      forgot_password: დაგავიწყდათ პაროლი?
+      change_password: პაროლის შეცვლა
+      change_password2: პაროლის შეცვლა
+      password_reset: პაროლის აღდგენა
+      sign_in2: შესვლა
+      sign_in: უკვე გაქვთ ანგარიში?      
+      sign_up2: რეგისტრაცია
+      sign_up_question: "არ გაქვთ ანგარიში?"
+      sign_up: დარეგისტრირდით
+      sign_up_title: შემოგვიერთდი “სთორიბილდერზე”
+      sign_out: გასვლა
+      sign_in_provider: "შესვლა %{provider}-ით"
+      sign_up_provider: "დარეგისტრირდით  %{provider}-ით"
+      like: მოწონება
+      likes: მოწონება
+      menu: მენიუ
     titles:
       new: "ახალი %{model}"
       edit: "შეცვლა %{model}"
@@ -35,8 +53,8 @@ ka:
       en: English
       ka: ქართული
     buttons:
-      back: იხილეთ სრულად
-      list: იხილეთ სრულად
+      back: იხილეთ ყველა
+      list: იხილეთ ყველა
       admin: ადმინისტრატორის განყოფილება
       delete: წაშლა
       edit: შეცვლა
@@ -46,23 +64,21 @@ ka:
       save: შენახვა
       create: შექმნა
       reset: საწყის კონფიგურაციაზე დაბრუნება
-      remove: მოშორება
+      remove: ამოშლა
       confirm: დარწმუნებული ხართ?
-      new: ახალი
+      new: ახალი            
     common:
       app_name: Bootstrap Starter Project
       added_on: "დამატებულია: %{date}" 
+      jumpstart: ჯამპსტარტ ჯორჯია
+      js_link_title: ჯამპსტარტ ჯორჯია - ჩვენ გაწვდით მონაცემებს უკეთ!
     msgs:
-      does_not_exist: თქვენ ცდილობთ იხილოთ გვერდი, რომელიც არ არსებობს.
-      not_authorized: თქვენ არ გაქვთ უფლება იხილოთ ეს გვერდი.
+      does_not_exist: თქვენ ცდილობთ ისეთი გვერდის ნახვას, რომელიც არ არსებობს.
+      not_authorized: თქვენ არ გაქვთ ამ გვერდის ნახვის უფლება.
       success_created: "%{obj} შექმნილია."
       success_updated: "%{obj} განახლებულია."
   layouts:
     application:
-      admin: ადმინისტრატო
-      sign_out: გასვლა
-      js_link_title: ჯამპსტარტ ჯორჯიას - ჩვენ გაწვდით ინფორმაციას უკეთ!
-      js_link_text: აგებულია
     unsupported_browser:
       title: არასათანადო ბრაუზერი
       p1: სამწუხაროდ თქვენი ინტერნეტ ბრაუზერის მოხმარების ვადა გასულია და ვერ მოხდება ვებ-გვერდთან სრულად დაკავშირება.
@@ -72,10 +88,6 @@ ka:
       ie: Internet Explorer (მხოლოდ Windows-ზე)
       opera: Opera
       Safari: Safari
-      admin: ადმინისტრატო
-      sign_out: გასვლა
-      js_link_title: ჯამპსტარტ ჯორჯიას - ჩვენ გაწვდით ინფორმაციას უკეთ!
-      js_link_text: აგებულია
   admin:
     index:
       title: ადმინისტრატორის განყოფილება
