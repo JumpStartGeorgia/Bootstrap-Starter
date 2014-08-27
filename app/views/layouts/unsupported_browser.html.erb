@@ -23,60 +23,58 @@
   </head>
   <body>
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <%= link_to(t('app.common.app_name'), root_path(:locale => I18n.locale),:class=>"brand")%>
-          <div class="container nav-collapse">
-            <ul class="nav pull-right">
-  						<% I18n.available_locales.each do |locale| %>
-  							<% if locale != I18n.locale %>
-  								<li><%= link_to t("app.language.#{locale}"), params.merge(:locale => locale) %></li>
-  							<% end %>
-  						<% end %>
-            </ul>
-	        </div>
+
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <%= link_to(t('app.common.app_name'), root_path(:locale => I18n.locale),:class=>"navbar-brand font")%>
         </div>
-      </div>
-    </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+						<% I18n.available_locales.each do |locale| %>
+							<% if locale != I18n.locale %>
+								<li><%= link_to t("app.language.#{locale}"), params.merge(:locale => locale) %></li>
+							<% end %>
+						<% end %>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
 
-		<div id="wrapper">
-		  <div class="container">
-		    <div class="content">
-		      <div class="row">
-		       <div class="span12">
+	  <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
 
-		          <div class="page-header">
-		            <h1>
-									<%= t('.title') %>
-								</h1>
-							</div>
+            <div class="page-header">
+	            <h1>
+								<%= t('.title') %>
+							</h1>
+						</div>
 
-								<p><%= t('.p1') %></p>
-								<p><%= t('.p2') %></p>
-								<ul class="standard">
-									<li>
-										<a href="http://www.google.com/chrome/"><%= t('.chrome') %></a>
-									</li>
-									<li>
-										<a href="http://www.mozilla.org/firefox/new/"><%= t('.firefox') %></a>
-									</li>
-									<li>
-										<a href="http://windows.microsoft.com/en-US/internet-explorer/downloads/ie/"><%= t('.ie') %></a>
-									</li>
-									<li>
-										<a href="http://www.opera.com/download/"><%= t('.opera') %></a>
-									</li>
-									<li>
-										<a href="http://support.apple.com/downloads/#internet"><%= t('.safari') %></a>
-									</li>
-								</ul>
-		        </div>
-		      </div><!--/row-->
-		    </div><!--/content-->
-		  </div> <!-- /container -->
-      <div class="push"><!--//--></div>
-    </div><!--/wrapper-->
+						<p><%= t('.p1') %></p>
+						<p><%= t('.p2') %></p>
+						<ul class="standard">
+							<li>
+								<a href="http://www.google.com/chrome/"><%= t('.chrome') %></a>
+							</li>
+							<li>
+								<a href="http://www.mozilla.org/firefox/new/"><%= t('.firefox') %></a>
+							</li>
+							<li>
+								<a href="http://windows.microsoft.com/en-US/internet-explorer/downloads/ie/"><%= t('.ie') %></a>
+							</li>
+							<li>
+								<a href="http://www.opera.com/download/"><%= t('.opera') %></a>
+							</li>
+							<li>
+								<a href="http://support.apple.com/downloads/#internet"><%= t('.safari') %></a>
+							</li>
+						</ul>
+          <%= yield %>
+        </div><!--/span-->
+      </div><!--/row-->
+    </div> <!-- /container -->
 
 
 	<% if Rails.env.production? %>

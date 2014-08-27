@@ -1,24 +1,23 @@
 @import "twitter/bootstrap/bootstrap";
-body {
-	padding-top: 60px;
-}
 
-@import "twitter/bootstrap/responsive";
+body { padding-top: 30px; }
 
 // Set the correct sprite paths
-@iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png');
-@iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');
+@iconSpritePath: image-url("twitter/bootstrap/glyphicons-halflings.png");
+@iconWhiteSpritePath: image-url("twitter/bootstrap/glyphicons-halflings-white.png");
 
 // Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
-// Note: If you use asset_path() here, your compiled boostrap_and_overrides.css will not
-//       have the proper paths. So for now we use the absolute path.
-@fontAwesomeEotPath: '/assets/fontawesome-webfont.eot';
-@fontAwesomeWoffPath: '/assets/fontawesome-webfont.woff';
-@fontAwesomeTtfPath: '/assets/fontawesome-webfont.ttf';
-@fontAwesomeSvgPath: '/assets/fontawesome-webfont.svg';
+@fontAwesomeEotPath: asset-url("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: asset-url("fontawesome-webfont.eot?#iefix");
+@fontAwesomeWoffPath: asset-url("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: asset-url("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: asset-url("fontawesome-webfont.svg#fontawesomeregular");
 
 // Font Awesome
-@import "fontawesome";
+@import "fontawesome/font-awesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/sprites.less";
 
 // Your custom LESS stylesheets goes here
 //
@@ -26,49 +25,70 @@ body {
 // you may use and inherit here
 //
 // If you'd like to override bootstrap's own variables, you can do so here as well
-// See http://twitter.github.com/bootstrap/less.html for their names and documentation
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
 //
 // Example:
-// @linkColor: #ff0000;
+// @link-color: #ff0000;
 
-/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
 
-html, body {
-  height: 100%;
-	font-size: 13px;
+/* Sticky footer styles
+from: http://getbootstrap.com/examples/sticky-footer-navbar/
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 41px;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 41px;
+  background-color: #D4D4D4;
 }
 
-#wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -155px;
-}
+/* footer styles */
+footer {
+	padding: 7px 20px 0;
+	font-size: 10pt;
+  color: #4f4f4f;
 
-#wrapper > .container {
-	padding-top: 60px;
-	padding-bottom: 60px;
-	overflow: auto;
-}
-
-.push { height: 155px; } /* Just some arbitrary space to add between footer and rest of the content, when they are close */
-
-@media (max-width: 979px) {
-  body {
-  	margin-top: 0;
+  div#left {
+	  margin: 0 !important;
+	  float: left;
+	  width: 30%;
+	  margin-top: 20px;
+    padding-top: 3px;
   }
-  #wrapper > .container {
-  	padding: 1em;
+  a:hover {
+	  background-color: transparent;
   }
-	.navbar-fixed-top  {
-		margin: 0;
-	}
+
+  div#middle {
+    margin: 0;
+	  font-size: 12px;
+	  width: 38%;
+	  text-align: center;
+	  float: left;
+  }
+
+  div#right {
+	  margin: 0 !important;
+	  float: right;
+	  width: 30%;
+	  text-align: right;
+  }
 }
 
-.container > ul.nav  {
-	line-height: 20px;
+/* form group admin navigation buttons */
+.form-group-admin-buttons{
+  background-color: #f5f5f5;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
 }
-.navbar-fixed-top .navbar-inner .container .brand {
-  font-size: 19px;
-}
+

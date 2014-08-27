@@ -36,13 +36,13 @@ private
   def action_links(user)
     x = ''
     x << link_to(I18n.t("helpers.links.edit"),
-                      edit_admin_user_path(user, :locale => I18n.locale), :class => 'btn btn-mini')
+                      edit_admin_user_path(user, :locale => I18n.locale), :class => 'btn btn-default btn-xs')
     x << " "
     x << link_to(I18n.t("helpers.links.destroy"),
                       admin_user_path(user, :locale => I18n.locale),
                       :method => :delete,
 											:data => { :confirm => I18n.t("helpers.links.confirm") },
-                      :class => 'btn btn-mini btn-danger')
+                      :class => 'btn btn-xs btn-danger')
     x << "<br /><br />"
     x << I18n.t('app.common.added_on', :date => I18n.l(user.created_at, :format => :short))
     return x.html_safe

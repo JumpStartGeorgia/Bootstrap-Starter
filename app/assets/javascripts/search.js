@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 
   $('#users-datatable').dataTable({
-    "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",    
+    "sDom": "<'row'<'col-sm-6'l><'col-sm-6'f>r>t<'row'<'col-sm-6'i><'col-sm-6'p>>",    
     "sPaginationType": "bootstrap",
     "bJQueryUI": true,
     "bProcessing": true,
