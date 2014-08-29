@@ -46,8 +46,10 @@ ka:
       likes: მოწონება
       menu: მენიუ
     titles:
-      new: "ახალი %{model}"
       edit: "შეცვლა %{model}"
+      save: "Save %{model}"
+      new: "ახალი %{model}"
+      delete: "Delete %{model}"
   app:
     language:
       en: English
@@ -79,6 +81,7 @@ ka:
       success_updated: "%{obj} განახლებულია."
   layouts:
     application:
+      toggle: Toggle navigation
     unsupported_browser:
       title: არასათანადო ბრაუზერი
       p1: სამწუხაროდ თქვენი ინტერნეტ ბრაუზერის მოხმარების ვადა გასულია და ვერ მოხდება ვებ-გვერდთან სრულად დაკავშირება.

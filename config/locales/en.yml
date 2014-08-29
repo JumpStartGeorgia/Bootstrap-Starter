@@ -46,8 +46,10 @@ en:
       likes: Likes      
       menu: Menu
     titles:
-      new: "New %{model}"
       edit: "Edit %{model}"
+      save: "Save %{model}"
+      new: "New %{model}"
+      delete: "Delete %{model}"
   app:
     language:
       en: English
@@ -79,6 +81,7 @@ en:
       success_updated: "%{obj} was successfully updated."
   layouts:
     application:
+      toggle: Toggle navigation
     unsupported_browser:
       title: Unsupported Browser
       p1: We are sorry to report that your browser is out of date and will not properly render the content from this website.
