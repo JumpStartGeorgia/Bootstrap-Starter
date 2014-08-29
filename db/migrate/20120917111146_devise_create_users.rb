@@ -38,6 +38,12 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # t.string :authentication_token
 
 
+      ## omniauth login fields
+      t.string :provider
+      t.string :uid
+      t.string :nickname
+      t.string :avatar
+
       t.timestamps
     end
 
@@ -46,5 +52,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
     # add_index :users, :confirmation_token,   :unique => true
     # add_index :users, :unlock_token,         :unique => true
     # add_index :users, :authentication_token, :unique => true
+    add_index :users, [:provider, :uid], :name => 'idx_users_provider'
   end
 end

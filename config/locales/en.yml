@@ -15,6 +15,10 @@ en:
       messages:
         required_field: "is a required field."
         already_exists: 'already exists in the database.'
+  mailer:
+    closing: "Sincerely,"
+    signature: JumpStart Georgia
+    unsubscribe: Click here to change your notification settings
   helpers:
     actions: Actions
     links:
@@ -42,6 +46,8 @@ en:
       sign_out: Sign Out
       sign_in_provider: "Sign in with %{provider}"
       sign_up_provider: "Sign up with %{provider}"
+      sign_in_local_or_provider: or log in with your email and password
+      reset_or_sign_in: sign in with facebook or reset your password
       like: Like   
       likes: Likes      
       menu: Menu
@@ -104,3 +110,11 @@ en:
         title: New User
       show:
         title: User Details
+  devise:
+    mailer:
+      reset_password_instructions:
+        title: 'Hello %{nickname}!'
+        p1: Someone has requested a link to change your password on %{app_name}, and you can do this through the link below.
+        link_title: Change my password
+        p2: "If you didn't request this, please ignore this email."
+        p3: "Your password won't change until you access the link above and create a new one."                
