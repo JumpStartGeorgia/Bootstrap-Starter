@@ -10,10 +10,10 @@ class UsersDatatable
 
   def as_json(options = {})
     {
-      sEcho: params[:sEcho].to_i,
-      iTotalRecords: user_query.count,
-      iTotalDisplayRecords: users.total_entries,
-      aaData: data
+      draw: params[:draw].to_i,
+      recordsTotal: user_query.count,
+      recordsFiltered: users.total_entries,
+      data: data
     }
   end
 
@@ -60,26 +60,26 @@ private
   def fetch_users
     users = user_query.order("#{sort_column} #{sort_direction}")
     users = users.page(page).per_page(per_page)
-    if params[:sSearch].present?
-      users = users.where("users.email like :search", search: "%#{params[:sSearch]}%")
+    if params[:search].present? && params[:search][:value].present?
+      users = users.where("users.email like :search", search: "%#{params[:search][:value]}%")
     end
     users
   end
 
   def page
-    params[:iDisplayStart].to_i/per_page + 1
+    params[:start].to_i/per_page + 1
   end
 
   def per_page
-    params[:iDisplayLength].to_i > 0 ? params[:iDisplayLength].to_i : 10
+    params[:length].to_i > 0 ? params[:length].to_i : 10
   end
 
   def sort_column
     columns = %w[users.email users.role users.created_at]
-    columns[params[:iSortCol_0].to_i]
+    columns[params[:order]['0'][:column].to_i]
   end
 
   def sort_direction
-    params[:sSortDir_0] == "desc" ? "desc" : "asc"
+    params[:order]['0'][:dir] == "desc" ? "desc" : "asc"
   end
 end

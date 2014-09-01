@@ -1,17 +1,24 @@
 {
-  "sProcessing":   "მიმდინარეობს დამუშავება...",
-  "sLengthMenu":   "აჩვენე _MENU_ ჩანაწერი",
-  "sZeroRecords":  "არაფერი მოიძებნა",
-  "sInfo":         "ნაჩვენებია ჩანაწერები _START_–დან _END_–მდე, სულ _TOTAL_ ჩანაწერია",
-  "sInfoEmpty":    "ნაჩვენებია ჩანაწერები 0–დან 0–მდე, სულ 0 ჩანაწერია",
-  "sInfoFiltered": "(გაფილტრული შედეგი _MAX_ ჩანაწერიდან)",
-  "sInfoPostFix":  "",
-  "sSearch":       "ძიება:",
-  "sUrl":          "",
-  "oPaginate": {
-      "sFirst":    "პირველი",
-      "sPrevious": "წინა",
-      "sNext":     "შემდეგი",
-      "sLast":     "ბოლო"
+  "emptyTable":     "No data available in table",
+  "info":         "ნაჩვენებია ჩანაწერები _START_–დან _END_–მდე, სულ _TOTAL_ ჩანაწერია",
+  "infoEmpty":    "ნაჩვენებია ჩანაწერები 0–დან 0–მდე, სულ 0 ჩანაწერია",
+  "infoFiltered": "(გაფილტრული შედეგი _MAX_ ჩანაწერიდან)",
+  "infoPostFix":  "",
+  "thousands":      ",",
+  "lengthMenu":   "აჩვენე _MENU_ ჩანაწერი",
+  "loadingRecords": "Loading...",
+  "processing":   "მიმდინარეობს დამუშავება...",
+  "search":       "ძიება:",
+  "zeroRecords":  "არაფერი მოიძებნა",
+  "paginate": {
+      "first":    "პირველი",
+      "last":     "ბოლო",
+      "next":     "შემდეგი",
+      "previous": "წინა",
   } 
+  "aria": {
+      "sortAscending":  ": activate to sort column ascending",
+      "sortDescending": ": activate to sort column descending"
+  }
 }
+

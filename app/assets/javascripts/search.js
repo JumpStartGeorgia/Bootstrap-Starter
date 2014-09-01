@@ -6,6 +6,15 @@ $(document).ready(function(){
 
 
   $('#users-datatable').dataTable({
+    "serverSide": true,
+    "ajax": $('#users-datatable').data('source'),
+    "order": [[2, 'desc']],
+    "language": {
+      "url": gon.datatable_i18n_url
+    }
+    /*,
+    
+
     "sDom": "<'row'<'col-sm-6'l><'col-sm-6'f>r>t<'row'<'col-sm-6'i><'col-sm-6'p>>",    
     "sPaginationType": "bootstrap",
     "bJQueryUI": true,
@@ -18,6 +27,7 @@ $(document).ready(function(){
       "sUrl": gon.datatable_i18n_url
     },
     "aaSorting": [[2, 'desc']]
+    */
   });
 
 
