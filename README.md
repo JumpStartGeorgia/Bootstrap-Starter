@@ -237,8 +237,7 @@ Also, the translation of the DataTable interface into Georgian is located at [/p
 ### Unicorn
 [Unicorn](http://unicorn.bogomips.org/) is a Rails server that this application is setup to use in staging and production environments.
 
-
-## Maintenance Mode
+### Maintenance Mode
 The nginx config file located at [/config/deploy/staging/nginx.conf](/config/deploy/staging/nginx.conf) and [/config/deploy/production/nginx.conf](/config/deploy/production/nginx.conf) is setup to look for a file in the [/public](/public) folder called maintenance.html.  If this file is found, the file will automatically be shown instead of processing whatever request the user is asking for. 
 
 In the /public folder, there is a file called [maintenance_disabled.html](/public/maintenance_disabled.html). This file is a plain html file that is setup to have a similar look as the [/app/views/layout/application.html.erb](/app/views/layout/application.html.erb). The content of this file is a simple message to the user indicating that the site is down and for how long. 
