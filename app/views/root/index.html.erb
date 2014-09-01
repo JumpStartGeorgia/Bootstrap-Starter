@@ -1,4 +1,17 @@
 <% title "JumpStart's Rails Bootstrap Starter Template" %>
 
-Hi!
+<% if @about.present? %>
+  <%= simple_format_no_tags(@about.content, {}, {sanitize: false}) %>
+<% else %>
+  <p>
+    Welcome to JumpStart's Rails Bootstrap Starter Template project. To get started, please run the following at the command line: 
+  </p>
+  <ul>
+    <li>rake db:migrate</li>
+    <li>rake db:seed</li>
+  </ul>
+  <p>
+    After you have run those two commands please reload this page.
+  </p>
+<% end %>
 

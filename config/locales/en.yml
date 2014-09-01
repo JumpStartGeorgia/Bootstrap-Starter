@@ -3,6 +3,7 @@ en:
   activerecord:
     models:
       user: User
+      page: Text for Pages
     attributes:
       user:
         email: Email Address
@@ -11,6 +12,11 @@ en:
         role: Role
         remember_me: Remeber Me
         nickname: Nickname
+      page:
+        name: Unique name for content (do not change!)
+      page_translation:
+        title: Title to show above content
+        content: Content
     errors:
       messages:
         required_field: "is a required field."
@@ -101,6 +107,7 @@ en:
     index:
       title: Administration Section
       users: Users
+      pages: Edit Text on Site
     users:
       edit:
         title: Editing User

@@ -24,6 +24,47 @@ module ApplicationHelper
 		text.html_safe
 	end
 
+  def current_url
+    "#{request.protocol}#{request.host_with_port}#{request.fullpath}"
+  end
+  
+	def full_url(path)
+		"#{request.protocol}#{request.host_with_port}#{path}"
+	end
+
+	# put the default locale first and then sort the remaining locales
+	def create_sorted_locales
+    x = I18n.available_locales.dup
+    
+    # sort
+    x.sort!{|x,y| x <=> y}
+
+    # move default locale to first position
+    default = x.index{|x| x == I18n.default_locale}
+    if default.present? && default > 0
+      x.unshift(x[default])
+      x.delete_at(default+1)
+    end
+
+    return x
+	end
+
+	# put the default locale first and then sort the remaining locales
+	def create_sorted_translation_objects(trans)
+	  if trans.present?
+      # sort
+      trans.sort!{|x,y| x.locale <=> y.locale}
+
+      # move default locale to first position
+      default = trans.index{|x| x.locale == I18n.default_locale.to_s}
+      if default.present? && default > 0
+        trans.unshift(trans[default])
+        trans.delete_at(default+1)
+      end
+	  end
+    return trans
+	end
+
 
 	# Based on https://gist.github.com/1182136
   class BootstrapLinkRenderer < ::WillPaginate::ActionView::LinkRenderer
