@@ -42,7 +42,7 @@ en:
       sign_up2: Sign Up
       sign_up_question: "Not a member yet?"
       sign_up: "Register now"
-      sign_up_title: Join StoryBuilder
+      sign_up_title: Join %{app_name}
       sign_out: Sign Out
       sign_in_provider: "Sign in with %{provider}"
       sign_up_provider: "Sign up with %{provider}"

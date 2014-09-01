@@ -42,7 +42,7 @@ ka:
       sign_up2: რეგისტრაცია
       sign_up_question: "არ გაქვთ ანგარიში?"
       sign_up: დარეგისტრირდით
-      sign_up_title: შემოგვიერთდი “სთორიბილდერზე”
+      sign_up_title: შემოგვიერთდი “%{app_name}”
       sign_out: გასვლა
       sign_in_provider: "შესვლა %{provider}-ით"
       sign_up_provider: "დარეგისტრირდით  %{provider}-ით"

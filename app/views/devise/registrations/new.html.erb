@@ -1,5 +1,5 @@
 <%- model_class = User -%>
-<% title t('helpers.links.sign_up_title').html_safe %> 
+<% title t('helpers.links.sign_up_title', :app_name => t('app.common.app_name')) %> 
 
 <div id="signup-form">
   <% if @enable_omniauth %>
