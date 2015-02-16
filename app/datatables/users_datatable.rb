@@ -22,9 +22,14 @@ private
   def data
     users.map do |user|
       [
+        user.nickname,
         user.email,
         user.role_name.humanize,
+        I18n.l(user.created_at, :format => :file),
+        user.current_sign_in_at.present? ? I18n.l(user.current_sign_in_at, :format => :file) : nil,
+        user.sign_in_count,
         action_links(user)
+
       ]
     end
   end
@@ -43,10 +48,7 @@ private
                       :method => :delete,
 											:data => { :confirm => I18n.t("helpers.links.confirm") },
                       :class => 'btn btn-xs btn-danger')
-    x << "<br /><br />"
-    x << I18n.t('app.common.added_on', :date => I18n.l(user.created_at, :format => :short))
     return x.html_safe
-    return x
   end
 
   def user_query
@@ -75,7 +77,7 @@ private
   end
 
   def sort_column
-    columns = %w[users.email users.role users.created_at]
+    columns = %w[users.nickname users.email users.role users.created_at users.current_sign_in_at users.sign_in_count]
     columns[params[:order]['0'][:column].to_i]
   end
 

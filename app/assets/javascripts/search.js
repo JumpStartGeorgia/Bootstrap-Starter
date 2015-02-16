@@ -8,10 +8,13 @@ $(document).ready(function(){
   $('#users-datatable').dataTable({
     "serverSide": true,
     "ajax": $('#users-datatable').data('source'),
-    "order": [[2, 'desc']],
+    "order": [[4, 'desc']],
     "language": {
       "url": gon.datatable_i18n_url
-    }
+    },
+    "columnDefs": [
+       { orderable: false, targets: [-1] }
+    ]
     /*,
     
 
