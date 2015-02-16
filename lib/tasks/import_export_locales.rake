@@ -6,7 +6,7 @@ require 'import_export_locales'
 
 namespace :translations do
 
-  file_prefix = "chaikhana"
+  file_prefix = Rails.application.class.parent_name
   here = File.expand_path(File.dirname(__FILE__))
   root = File.expand_path(File.join(here, "..", ".."))
   config_folder = File.join(root, "config")
