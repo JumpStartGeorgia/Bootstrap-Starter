@@ -52,5 +52,9 @@ module BootstrapStarter
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # from: https://robots.thoughtbot.com/content-compression-with-rack-deflater
+    # compress all html/json responses
+    config.middleware.use Rack::Deflater
   end
 end
