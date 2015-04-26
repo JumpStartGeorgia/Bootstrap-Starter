@@ -1,11 +1,27 @@
 <%%= semantic_form_for @<%= singular_name %> do |f| %>
+  <%%= f.error_messages %>
+
   <%%= f.inputs do %>
   <%- attributes.each do |attribute| -%>
+  <%- if (attribute.type == :integer || attribute.type == :float) && (attribute.name =~ /_id$/).nil? -%>
+    <%%= f.input :<%= attribute.name %>, as: :number, input_html: {size: 20} %>
+  <%- elsif attribute.type == :date -%>
+    <%%= f.input :<%= attribute.name %>, as: :string, class: 'datepicker', input_html: {size: 20} %>
+  <%- elsif attribute.type == :datetime -%>
+    <%%= f.input :<%= attribute.name %>, as: :string, class: 'datetimepicker', input_html: {size: 20} %>
+  <%- elsif attribute.type == :boolean -%>
+    <%%= f.input :<%= attribute.name %>, as: :radio %>
+  <%- elsif attribute.type == :text -%>
+    <%%= f.input :<%= attribute.name %>, as: :text, rows: 10, :input_html => { class: 'tinymce' } %>
+  <%- else -%>
     <%%= f.input :<%= attribute.name %> %>
+  <%- end -%>
   <%- end -%>
   <%% end %>
 
-  <%%= f.actions do %>
-    <%%= f.action :submit, :as => :input %>
-  <%% end %>
+  <div class="form-group">
+    <%%= f.submit nil, :class => 'btn btn-primary' %>
+    <%%= f.submit t('helpers.links.reset'), :class => 'btn btn-warning', :type => :reset, :name => :reset %>
+    <%%= link_to t('helpers.links.cancel'), <%= plural_table_name %>_path, :class => 'btn btn-mini btn-warning' %>
+  </div>
 <%% end %>
