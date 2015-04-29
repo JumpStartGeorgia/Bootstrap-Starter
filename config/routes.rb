@@ -1,4 +1,6 @@
 BootstrapStarter::Application.routes.draw do
+  resources :testtts
+
 	#--------------------------------
 	# all resources should be within the scope block below
 	#--------------------------------

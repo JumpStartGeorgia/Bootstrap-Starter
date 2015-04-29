@@ -1,0 +1,53 @@
+<%%- model_class = <%= singular_name.titleize %> -%>
+<%% title t '.title', :default => model_class.model_name.human.pluralize -%>
+
+<div class="form-group form-group-admin-buttons">
+  <%%= link_to t('.new', :default => t("helpers.links.new")), <%= item_path :action => :new %>, :class => 'btn btn-primary' %>
+  <%%= link_to t('helpers.links.admin'), admin_path, :class => 'btn btn-default' %>
+</div>
+
+<table class="table table-striped display">
+  <thead>
+    <tr>
+    <%- model_attributes.each do |attribute| -%>
+      <th><%%= model_class.human_attribute_name(:<%= attribute.name %>) %></th>
+    <%- end -%>
+      <th><%%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%% @<%= instances_name %>.each do |<%= instance_name %>| %>
+    <tr>
+      <td>
+        <%%= link_to t('helpers.links.view'),
+                    admin_<%= item_path %>, 
+                    :class => 'btn btn-mini btn-default' %>
+      </td>
+    <%- model_attributes.each do |attribute| -%>
+      <td>
+      <%- if (attribute.type == :integer || attribute.type == :float) && (attribute.name =~ /_id$/).nil? -%>
+        <%%= number_with_delimiter(number_with_precision(<%= instance_name %>.<%= attribute.name %>)) %>
+      <%- elsif attribute.type == :date -%>
+        <%%= l <%= instance_name %>.<%= attribute.name %> if <%= instance_name %>.<%= attribute.name %>.present? %>
+      <%- elsif attribute.type == :datetime -%>
+        <%%= l <%= instance_name %>.<%= attribute.name %>, format: :file if <%= instance_name %>.<%= attribute.name %>.present? %>
+      <%- else -%>
+        <%%= <%= instance_name %>.<%= attribute.name %> %>
+      <%- end -%>
+      </td>
+    <%- end -%>
+      <td>
+        <%%= link_to t('app.buttons.edit'),
+                    <%= item_path :action => :edit, :instance_variable => true %>, 
+                    :class => 'btn btn-mini btn-default' %>
+        <%%= link_to t('app.buttons.delete'),
+                    admin_ <%= item_path :instance_variable => true %>,
+                    :method => :delete,
+                    :data => { :confirm => I18n.t("helpers.links.confirm") },
+                    :class => 'btn btn-mini btn-danger' %>
+      </td>
+    </tr>
+    <%% end %>
+  </tbody>
+</table>
+

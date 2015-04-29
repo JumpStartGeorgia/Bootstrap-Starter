@@ -94,6 +94,7 @@ ka:
       not_authorized: თქვენ არ გაქვთ ამ გვერდის ნახვის უფლება.
       success_created: "%{obj} შექმნილია."
       success_updated: "%{obj} განახლებულია."
+      success_destroyed: "%{obj} was successfully destroyed."
   layouts:
     application:
       toggle: ნავიგაციის ჩართვა/გამორთვა

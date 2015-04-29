@@ -1,0 +1,18 @@
+<%= semantic_form_for @testtt do |f| %>
+  <%= f.error_messages %>
+
+  <%= f.inputs do %>
+    <%= f.input :name %>
+    <%= f.input :description, as: :text, rows: 10, :input_html => { class: 'tinymce' } %>
+    <%= f.input :age, as: :number, input_html: {size: 20} %>
+    <%= f.input :worth, as: :number, input_html: {size: 20} %>
+    <%= f.input :is_male, as: :radio %>
+    <%= f.input :born_at, as: :string, class: 'datepicker', input_html: {size: 20} %>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= f.submit t('helpers.links.reset'), :class => 'btn btn-warning', :type => :reset, :name => :reset %>
+    <%= link_to t('helpers.links.cancel'), testtts_path, :class => 'btn btn-mini btn-warning' %>
+  </div>
+<% end %>

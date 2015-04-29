@@ -1,0 +1,61 @@
+<%- model_class = Testtt -%>
+<% title t '.title', :default => model_class.model_name.human.pluralize -%>
+
+<div class="form-group form-group-admin-buttons">
+  <%= link_to t('.new', :default => t("helpers.links.new")), new_testtt_path, :class => 'btn btn-primary' %>
+  <%= link_to t('helpers.links.admin'), admin_path, :class => 'btn btn-default' %>
+</div>
+
+<table class="table table-striped display">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:description) %></th>
+      <th><%= model_class.human_attribute_name(:age) %></th>
+      <th><%= model_class.human_attribute_name(:worth) %></th>
+      <th><%= model_class.human_attribute_name(:is_male) %></th>
+      <th><%= model_class.human_attribute_name(:born_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @testtts.each do |testtt| %>
+    <tr>
+      <td>
+        <%= link_to t('helpers.links.view'),
+                    admin_testtt, 
+                    :class => 'btn btn-mini btn-default' %>
+      </td>
+      <td>
+        <%= testtt.name %>
+      </td>
+      <td>
+        <%= testtt.description %>
+      </td>
+      <td>
+        <%= number_with_delimiter(number_with_precision(testtt.age)) %>
+      </td>
+      <td>
+        <%= number_with_delimiter(number_with_precision(testtt.worth)) %>
+      </td>
+      <td>
+        <%= testtt.is_male %>
+      </td>
+      <td>
+        <%= l testtt.born_at if testtt.born_at.present? %>
+      </td>
+      <td>
+        <%= link_to t('app.buttons.edit'),
+                    edit_testtt_path(@testtt), 
+                    :class => 'btn btn-mini btn-default' %>
+        <%= link_to t('app.buttons.delete'),
+                    admin_ @testtt,
+                    :method => :delete,
+                    :data => { :confirm => I18n.t("helpers.links.confirm") },
+                    :class => 'btn btn-mini btn-danger' %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
